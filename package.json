@@ -1,0 +1,17 @@
+{
+  "name": "shaka-player-demo",
+  "version": "1.0.0",
+  "description": "A demo of implementing Shaka Player into React",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kieranroneill/shaka-player-demo.git"
+  },
+  "author": {
+    "name": "Kieran O'Neill",
+    "email": "hello@kieranoneill.com",
+    "url": "https://kieranoneill.com"
+  },
+  "license": "MIT",
+  "private": true
+}
