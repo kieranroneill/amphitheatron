@@ -1,11 +1,10 @@
 import { i18n } from 'i18next';
 
 // types
-import type { ILogger } from '@app/types';
+import type { IBaseProps } from '@app/types';
 
-interface IProps {
+interface IProps extends IBaseProps {
   i18next: i18n;
-  logger: ILogger;
 }
 
 export default IProps;

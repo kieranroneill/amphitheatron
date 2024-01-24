@@ -1,25 +1,60 @@
-import React, { FC } from 'react';
+import React, { FC, MutableRefObject, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+
+// data
+import assets from '@app/data/assets.json';
+
+// hooks
+import useShakaPlayer from '@app/hooks/useShakaPlayer';
 
 // types
 import { IBaseExecutionProps } from '@app/types';
 import { IProps } from './types';
 
-const Inner = styled.div`
-  max-width: 1000px;
-`;
-const Outer = styled.main<IBaseExecutionProps>`
-  align-items: flex-start;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 100%;
-  padding-bottom: ${(props) => props.theme.spacing['5']};
-  padding-top: ${(props) => props.theme.spacing['2.5']};
+const Container = styled.div``;
+const Video = styled.video<IBaseExecutionProps>`
+  width: 640px;
 `;
 
-const VideoPlayer: FC<IProps> = ({ onStop, onStart }: IProps) => {
-  return <div>Hello Humie!</div>;
+const VideoPlayer: FC<IProps> = ({
+  onLoaded,
+  onComplete,
+  ...baseProps
+}: IProps) => {
+  const videoRef: MutableRefObject<HTMLVideoElement | null> =
+    useRef<HTMLVideoElement | null>(null);
+  // hooks
+  const { initializePlayer, loadStream, player } = useShakaPlayer({
+    ...baseProps,
+    onLoaded,
+    onComplete,
+  });
+
+  useEffect(() => {
+    (async () => {
+      if (player) {
+        await loadStream(assets[0]);
+      }
+    })();
+  }, [player]);
+  useEffect(() => {
+    (async () => {
+      if (videoRef.current && !player) {
+        await initializePlayer(videoRef.current);
+      }
+    })();
+  }, [videoRef]);
+
+  return (
+    <Container>
+      <Video
+        autoPlay={true}
+        controls={true}
+        poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+        ref={videoRef}
+      />
+    </Container>
+  );
 };
 
 export default VideoPlayer;

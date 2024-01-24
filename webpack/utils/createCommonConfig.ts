@@ -43,6 +43,10 @@ export default function createCommonConfig(): Configuration {
             from: resolve(SRC_PATH, 'images'),
             to: resolve(DIST_PATH, 'assets', 'images'),
           },
+          {
+            from: resolve(SRC_PATH, 'data'),
+            to: resolve(DIST_PATH, 'assets', 'data'),
+          },
         ],
       }),
     ],
@@ -51,7 +55,9 @@ export default function createCommonConfig(): Configuration {
       alias: {
         ['@app/components']: resolve(SRC_PATH, 'components'),
         ['@app/constants']: resolve(SRC_PATH, 'constants'),
+        ['@app/data']: resolve(SRC_PATH, 'data'),
         ['@app/fonts']: resolve(SRC_PATH, 'fonts'),
+        ['@app/hooks']: resolve(SRC_PATH, 'hooks'),
         ['@app/images']: resolve(SRC_PATH, 'images'),
         ['@app/translations']: resolve(SRC_PATH, 'translations'),
         ['@app/types']: resolve(SRC_PATH, 'types'),

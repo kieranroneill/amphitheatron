@@ -11,19 +11,21 @@ import Main from '@app/components/Main';
 import VideoPlayer from '@app/components/VideoPlayer';
 
 // types
+import type { IAsset } from '@app/types';
 import type { IProps } from './types';
 
 // utils
 import createTheme from '@app/utils/createTheme';
 
-const App: FC<IProps> = ({ i18next }: IProps) => {
+const App: FC<IProps> = ({ i18next, ...baseProps }: IProps) => {
   const { t } = useTranslation();
   const defaultTitle: string = `${__APP_TITLE__} | ${t('captions.tagline')}`;
   // states
   const [title, setTitle] = useState<string>(defaultTitle);
   // handlers
-  const handlePlayerStart = () => {};
-  const handlePlayerStop = () => setTitle(defaultTitle);
+  const handlePlayerLoaded = (asset: IAsset) =>
+    setTitle(`${__APP_TITLE__} | ${asset.title}`); // change the title to that of the asset
+  const handlePlayerComplete = () => setTitle(defaultTitle); // reset the title
 
   return (
     <>
@@ -38,8 +40,9 @@ const App: FC<IProps> = ({ i18next }: IProps) => {
 
           <Main>
             <VideoPlayer
-              onStart={handlePlayerStart}
-              onStop={handlePlayerStop}
+              {...baseProps}
+              onComplete={handlePlayerComplete}
+              onLoaded={handlePlayerLoaded}
             />
           </Main>
 
