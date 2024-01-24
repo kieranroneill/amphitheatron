@@ -1,11 +1,11 @@
 {
   "name": "amphitheatron",
   "version": "1.0.0",
-  "description": "A demo of implementing Shaka Player into React",
+  "description": "A demo implementing Shaka Player in ReactJS.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kieranroneill/shaka-player-demo.git"
+    "url": "git@github.com:kieranroneill/amphitheatron.git"
   },
   "author": {
     "name": "Kieran O'Neill",
@@ -36,6 +36,7 @@
     "@types/node": "^20.11.6",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "copy-webpack-plugin": "^12.0.2",
@@ -59,8 +60,12 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
+    "i18next": "^23.7.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-i18next": "^14.0.1",
+    "shaka-player": "^4.7.7",
     "styled-components": "^6.1.8"
   }
 }

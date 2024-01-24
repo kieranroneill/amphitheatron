@@ -18,13 +18,23 @@ const GlobalStyle: NamedExoticComponent = createGlobalStyle`
 
   body,
   #root {
+    padding: 0;
+    margin: 0;
+  }
+
+  body,
+  #root {
     background-color: ${(props) => props.theme.palette.primary500};
     font-family: ${(props) => props.theme.typography.baseFontFamily}, sans-serif;
     color: ${(props) => props.theme.typography.baseFontColor};
     font-weight: ${(props) => props.theme.typography.baseFontWeight};
     min-height: 100vh;
-    padding: 0;
-    margin: 0;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   a {
