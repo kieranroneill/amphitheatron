@@ -1,5 +1,5 @@
 {
-  "name": "shaka-player-demo",
+  "name": "amphitheatron",
   "version": "1.0.0",
   "description": "A demo of implementing Shaka Player into React",
   "main": "dist/index.js",

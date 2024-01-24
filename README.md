@@ -65,7 +65,9 @@ yarn install
 yarn start
 ```
 
-2. Navigate to [http://localhost:8080](http://localhost:8080).<sup>[Back to top ^][table-of-contents]</sup>
+2. Navigate to [http://localhost:8080](http://localhost:8080).
+
+<sup>[Back to top ^][table-of-contents]</sup>
 
 ## 👏 2. How To Contribute
 
