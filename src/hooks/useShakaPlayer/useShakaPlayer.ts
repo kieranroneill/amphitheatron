@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import shaka from 'shaka-player/dist/shaka-player.compiled';
+import shaka from 'shaka-player';
 
 // types
 import { IAsset } from '@app/types';
-import { IProps, IUseShakaPlayerState } from './types';
+import { IErrorEvent, IProps, IUseShakaPlayerState } from './types';
 
 export default function useShakaPlayer({
   onComplete,
@@ -87,8 +87,8 @@ export default function useShakaPlayer({
       onComplete(asset);
     }
   };
-  const handleErrorEvent = (event: shaka.Player.ErrorEvent) => {
-    console.log(event.detail);
+  const handleErrorEvent = (event: unknown) => {
+    console.log((event as IErrorEvent).detail);
   };
 
   useEffect(() => {

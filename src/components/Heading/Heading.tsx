@@ -4,26 +4,45 @@ import styled, { css } from 'styled-components';
 // types
 import { IBaseExecutionProps, ITypographyProps } from '@app/types';
 
-const baseStyles = css<IBaseExecutionProps & ITypographyProps>`
+const baseStyles = css<IBaseExecutionProps>`
   padding: 0;
   margin: ${(props) => props.theme.spacing['2']} 0
     ${(props) => props.theme.spacing['8']};
+`;
+const Heading5 = styled.h5.attrs<IBaseExecutionProps & ITypographyProps>(
+  (props) => ({
+    ...props,
+  })
+)`
   text-align: ${(props) => props.textAlign};
 `;
-const Heading5 = styled.h5`
-  ${baseStyles}
+const Heading4 = styled.h4.attrs<IBaseExecutionProps & ITypographyProps>(
+  (props) => ({
+    ...props,
+  })
+)`
+  text-align: ${(props) => props.textAlign};
 `;
-const Heading4 = styled.h4`
-  ${baseStyles}
+const Heading3 = styled.h3.attrs<IBaseExecutionProps & ITypographyProps>(
+  (props) => ({
+    ...props,
+  })
+)`
+  text-align: ${(props) => props.textAlign};
 `;
-const Heading3 = styled.h3`
-  ${baseStyles}
+const Heading2 = styled.h2.attrs<IBaseExecutionProps & ITypographyProps>(
+  (props) => ({
+    ...props,
+  })
+)`
+  text-align: ${(props) => props.textAlign};
 `;
-const Heading2 = styled.h2`
-  ${baseStyles}
-`;
-const Heading1 = styled.h1`
-  ${baseStyles}
+const Heading1 = styled.h1.attrs<IBaseExecutionProps & ITypographyProps>(
+  (props) => ({
+    ...props,
+  })
+)`
+  text-align: ${(props) => props.textAlign};
 `;
 
 const Heading: FC<ITypographyProps & PropsWithChildren> = ({
