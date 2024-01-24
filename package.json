@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kieranroneill/amphitheatron.git"
+    "url": "https://github.com/kieranroneill/amphitheatron"
   },
   "author": {
     "name": "Kieran O'Neill",
