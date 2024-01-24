@@ -13,7 +13,15 @@
     "url": "https://kieranoneill.com"
   },
   "license": "MIT",
+  "keywords": [
+    "shakra-player",
+    "video-streaming",
+    "reactjs"
+  ],
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "build": "cross-env TS_NODE_PROJECT=\"webpack/tsconfig.webpack.json\" webpack --config webpack/webpack.config.ts --env environment=production",
     "lint": "eslint src/ --ext .js,.ts,.tsx",
