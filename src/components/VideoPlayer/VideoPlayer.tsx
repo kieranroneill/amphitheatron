@@ -1,8 +1,9 @@
-import React, { FC, PropsWithChildren } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 // types
 import { IBaseExecutionProps } from '@app/types';
+import { IProps } from './types';
 
 const Inner = styled.div`
   max-width: 1000px;
@@ -17,12 +18,8 @@ const Outer = styled.main<IBaseExecutionProps>`
   padding-top: ${(props) => props.theme.spacing['2.5']};
 `;
 
-const Main: FC<PropsWithChildren> = ({ children }: PropsWithChildren) => {
-  return (
-    <Outer>
-      <Inner>{children}</Inner>
-    </Outer>
-  );
+const VideoPlayer: FC<IProps> = ({ onStop, onStart }: IProps) => {
+  return <div>Hello Humie!</div>;
 };
 
-export default Main;
+export default VideoPlayer;

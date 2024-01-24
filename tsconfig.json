@@ -22,6 +22,7 @@
       "@app/constants": ["src/constants"],
       "@app/fonts/*": ["src/fonts/*"],
       "@app/images/*": ["src/images/*"],
+      "@app/translations": ["src/translations"],
       "@app/types": ["src/types"],
       "@app/utils/*": ["src/utils/*"],
     },

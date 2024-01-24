@@ -53,6 +53,7 @@ export default function createCommonConfig(): Configuration {
         ['@app/constants']: resolve(SRC_PATH, 'constants'),
         ['@app/fonts']: resolve(SRC_PATH, 'fonts'),
         ['@app/images']: resolve(SRC_PATH, 'images'),
+        ['@app/translations']: resolve(SRC_PATH, 'translations'),
         ['@app/types']: resolve(SRC_PATH, 'types'),
         ['@app/utils']: resolve(SRC_PATH, 'utils'),
       },
