@@ -11,6 +11,7 @@ const Outer = styled.main<IBaseExecutionProps>`
   align-items: flex-start;
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   justify-content: center;
   height: 100%;
   padding-bottom: ${(props) => props.theme.spacing['5']};

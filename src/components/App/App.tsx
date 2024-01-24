@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
 
 // components
+import Footer from '@app/components/Footer';
 import GlobalStyle from '@app/components/GlobalStyle';
 import Header from '@app/components/Header';
 import Main from '@app/components/Main';
@@ -41,6 +42,8 @@ const App: FC<IProps> = ({ i18next }: IProps) => {
               onStop={handlePlayerStop}
             />
           </Main>
+
+          <Footer />
         </ThemeProvider>
       </I18nextProvider>
     </>
