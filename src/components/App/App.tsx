@@ -15,7 +15,7 @@ interface IProps {
   logger: ILogger;
 }
 
-const App: FC<IProps> = ({ logger }: IProps) => {
+const App: FC<IProps> = () => {
   return (
     <ThemeProvider theme={createTheme}>
       <GlobalStyle />

@@ -1,9 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-// images
-import bannerLogo from '../../images/banner_logo.png';
-
 // types
 import { IBaseExecutionProps } from '@app/types';
 
@@ -23,9 +20,7 @@ const Outer = styled.main<IBaseExecutionProps>`
 const Main: FC = () => {
   return (
     <Outer>
-      <Inner>
-        <img src="/images/banner_logo.png" />
-      </Inner>
+      <Inner></Inner>
     </Outer>
   );
 };
