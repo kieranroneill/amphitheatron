@@ -8,9 +8,9 @@ const Inner = styled.div`
   max-width: 1000px;
 `;
 const Outer = styled.main<IBaseExecutionProps>`
-  align-items: flex-start;
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 1;
   justify-content: center;
   height: 100%;

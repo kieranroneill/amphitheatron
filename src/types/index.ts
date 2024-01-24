@@ -9,3 +9,4 @@ export type { default as ISizes } from './ISizes';
 export type { default as ISpacing } from './ISpacing';
 export type { default as ITheme } from './ITheme';
 export type { default as ITypography } from './ITypography';
+export type { default as ITypographyProps } from './ITypographyProps';

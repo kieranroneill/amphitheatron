@@ -47,12 +47,7 @@ const VideoPlayer: FC<IProps> = ({
 
   return (
     <Container>
-      <Video
-        autoPlay={true}
-        controls={true}
-        poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
-        ref={videoRef}
-      />
+      <Video autoPlay={true} controls={true} ref={videoRef} />
     </Container>
   );
 };

@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 // types
-import { IBaseExecutionProps } from '@app/types';
-import { IProps } from './types';
+import { IBaseExecutionProps, ITypographyProps } from '@app/types';
 
-const Text = styled.p<IBaseExecutionProps & IProps>`
+const Text = styled.p<IBaseExecutionProps & ITypographyProps>`
   font-size: ${({ size = 'md' }) => {
     switch (size) {
       case 'xs':
