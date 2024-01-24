@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://amphitheatron.kieranoneill.com">
-    <img alt="Kibisis & Browser logos" src="assets/logo.png" style="padding-top: 15px" height="64" />
+    <img alt="Kibisis & Browser logos" src="assets/logo.png" style="padding-top: 15px" height="128" />
   </a>
 </p>
 
