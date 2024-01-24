@@ -1,19 +1,17 @@
 import React, { FC, PropsWithChildren } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 // types
 import { IBaseExecutionProps, ITypographyProps } from '@app/types';
 
-const baseStyles = css<IBaseExecutionProps>`
-  padding: 0;
-  margin: ${(props) => props.theme.spacing['2']} 0
-    ${(props) => props.theme.spacing['8']};
-`;
 const Heading5 = styled.h5.attrs<IBaseExecutionProps & ITypographyProps>(
   (props) => ({
     ...props,
   })
 )`
+  padding: 0;
+  margin: ${(props) => props.theme.spacing['2']} 0
+    ${(props) => props.theme.spacing['8']};
   text-align: ${(props) => props.textAlign};
 `;
 const Heading4 = styled.h4.attrs<IBaseExecutionProps & ITypographyProps>(
@@ -21,6 +19,9 @@ const Heading4 = styled.h4.attrs<IBaseExecutionProps & ITypographyProps>(
     ...props,
   })
 )`
+  padding: 0;
+  margin: ${(props) => props.theme.spacing['2']} 0
+    ${(props) => props.theme.spacing['8']};
   text-align: ${(props) => props.textAlign};
 `;
 const Heading3 = styled.h3.attrs<IBaseExecutionProps & ITypographyProps>(
@@ -28,6 +29,9 @@ const Heading3 = styled.h3.attrs<IBaseExecutionProps & ITypographyProps>(
     ...props,
   })
 )`
+  padding: 0;
+  margin: ${(props) => props.theme.spacing['2']} 0
+    ${(props) => props.theme.spacing['8']};
   text-align: ${(props) => props.textAlign};
 `;
 const Heading2 = styled.h2.attrs<IBaseExecutionProps & ITypographyProps>(
@@ -35,6 +39,9 @@ const Heading2 = styled.h2.attrs<IBaseExecutionProps & ITypographyProps>(
     ...props,
   })
 )`
+  padding: 0;
+  margin: ${(props) => props.theme.spacing['2']} 0
+    ${(props) => props.theme.spacing['8']};
   text-align: ${(props) => props.textAlign};
 `;
 const Heading1 = styled.h1.attrs<IBaseExecutionProps & ITypographyProps>(
@@ -42,6 +49,9 @@ const Heading1 = styled.h1.attrs<IBaseExecutionProps & ITypographyProps>(
     ...props,
   })
 )`
+  padding: 0;
+  margin: ${(props) => props.theme.spacing['2']} 0
+    ${(props) => props.theme.spacing['8']};
   text-align: ${(props) => props.textAlign};
 `;
 

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+import { Trans } from 'react-i18next';
 import styled from 'styled-components';
 
 // components
@@ -23,8 +23,6 @@ const Outer = styled.footer`
 `;
 
 const Footer: FC = () => {
-  const { t } = useTranslation();
-
   return (
     <Outer>
       <Inner>
