@@ -13,5 +13,17 @@
     "url": "https://kieranoneill.com"
   },
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js,json,ts,tsx}\"",
+    "test": "exit 0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.5.0",
+    "@commitlint/config-conventional": "^18.5.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4"
+  }
 }
